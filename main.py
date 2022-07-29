@@ -1,7 +1,8 @@
+from _config import *
 from fastapi import FastAPI, Request
 #import uvicorn
 
-app = FastAPI()
+app = FastAPI(title=fastapi_title, version=fastapi_version, contact=fastapi_contact)
 
 
 @app.get("/")
