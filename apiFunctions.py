@@ -18,7 +18,7 @@ def ClientCorporation(client_corporation_id):
         """ % (client_corporation_id)
 
     results = cur.execute(qry)
-    results = cur.fetchall()
+    results = cur.fetchall()[0][0]
 
     return results
 
