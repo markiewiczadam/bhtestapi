@@ -23,4 +23,4 @@ def get_Vacancy_Details(vacancy_id: int):
 @app.post("/searchClientCorporation")
 def search_Client_Corporation(request: searchClientCorporationReq):
     #resp = searchClientCorporation(request)
-    return {"fieldname": "fieldvalue"}
+    return {"fieldname": request}
