@@ -3,17 +3,11 @@ from _config import *
 from fastapi import FastAPI, Request
 from apiFunctions import *
 
+###########
 
 app = FastAPI(title=fastapi_title, version=fastapi_version, contact=fastapi_contact)
 
-
-
-
-
-@app.get("/get")
-def get_name(name:str):
-    return {"name": name}
-
+###########
 
 @app.get("/getClientCorporation/{client_corporation_id}")
 def get_Client_Corporation(client_corporation_id:int):
