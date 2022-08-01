@@ -51,13 +51,13 @@ def searchClientCorporation(searchClientCorporationReq):
         varname = 'client_corporation_id'
         varvalue = searchClientCorporationReq.corpID
 
-    #elif searchClientCorporationReq.corpID != None:
-    #    varname = 'corporation_name'
-    #    varvalue = searchClientCorporationReq.corpManager
+    elif searchClientCorporationReq.corpName != None:
+        varname = 'corporation_name'
+        varvalue = searchClientCorporationReq.corpManager
 
-    #elif searchClientCorporationReq.corpID != None:
-    #    varname = 'manager'
-    #    varvalue = searchClientCorporationReq.corpManager
+    elif searchClientCorporationReq.corpManager != None:
+        varname = 'manager'
+        varvalue = searchClientCorporationReq.corpManager
 
 
     #qry = """
