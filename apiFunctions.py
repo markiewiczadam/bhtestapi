@@ -63,12 +63,10 @@ def searchClientCorporation(searchClientCorporationReq):
     qry = """
             SELECT array_agg(client_corp)
             FROM mi.v_api_ClientCorporationDetails
-            WHERE LOWER("client_corp"->>'%s')::TEXT LIKE '%%%s%%'
+            WHERE LOWER("client_corp"->>'%s')::TEXT LIKE LOWER('%%%s%%')
         """ % (varname, varvalue)
 
-    #results = cur.execute(qry)
-    #results = cur.fetchall()[0]
-
-    results = {"query": qry}
+    results = cur.execute(qry)
+    results = cur.fetchall()[0][0]
 
     return results
