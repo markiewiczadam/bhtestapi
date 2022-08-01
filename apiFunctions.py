@@ -47,9 +47,9 @@ def vacancyDetails(vacancy_id):
 
 def searchClientCorporation(searchClientCorporationReq):
 
-    if searchClientCorporationReq.corpID != None:
-        varname = 'client_corporation_id'
-        varvalue = searchClientCorporationReq.corpID
+    #if searchClientCorporationReq.corpID != None:
+    #    varname = 'client_corporation_id'
+    #    varvalue = searchClientCorporationReq.corpID
 
     #elif searchClientCorporationReq.corpID != None:
     #    varname = 'corporation_name'
@@ -60,13 +60,13 @@ def searchClientCorporation(searchClientCorporationReq):
     #    varvalue = searchClientCorporationReq.corpManager
 
 
-    qry = """
-            SELECT array_agg(client_corp) 
-            FROM mi.v_api_ClientCorporationDetails 
-            WHERE LOWER(%s) LIKE '%%%s%%'
-        """ % (varname, varvalue)
+    #qry = """
+    #        SELECT array_agg(client_corp)
+    #        FROM mi.v_api_ClientCorporationDetails
+    #        WHERE LOWER(%s) LIKE '%%%s%%'
+    #    """ % (varname, varvalue)
 
-    results = cur.execute(qry)
-    results = cur.fetchall()[0]
+    #results = cur.execute(qry)
+    #results = cur.fetchall()[0]
 
-    return qry
+    return searchClientCorporationReq
