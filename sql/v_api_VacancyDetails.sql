@@ -4,7 +4,7 @@ CREATE OR REPLACE VIEW mi.v_api_VacancyDetails AS
     ,row_to_json(v) as vacancy
     FROM (
             SELECT 
-            vacancy_id	
+             vacancy_id	
             ,vacancy_title	
             ,vacancy_owner_name		
             ,vacancy_status	
@@ -22,7 +22,7 @@ CREATE OR REPLACE VIEW mi.v_api_VacancyDetails AS
             FROM mi.v_vacancy v 
             JOIN (
                     SELECT 
-                    client_corporation_id	
+                     client_corporation_id	
                     ,corporation_name		
                     ,status		
                     ,manager	

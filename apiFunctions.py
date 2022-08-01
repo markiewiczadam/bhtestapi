@@ -10,10 +10,10 @@ cur = conn.cursor()
 
 ######## Function Definitions
 
-def ClientCorporation(client_corporation_id):
+def ClientCorporationDetails(client_corporation_id):
     qry = """
             SELECT array_agg(client_corp) 
-            FROM mi.v_api_ClientCorporation 
+            FROM mi.v_api_ClientCorporationDetails 
             WHERE client_corporation_id = %d
         """ % (client_corporation_id)
 
@@ -23,7 +23,7 @@ def ClientCorporation(client_corporation_id):
     return results
 
 
-def Vacancy(vacancy_id):
+def VacancyDetails(vacancy_id):
     qry = """
             SELECT array_agg(vacancy) 
             FROM mi.v_api_VacancyDetails 

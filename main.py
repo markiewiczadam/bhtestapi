@@ -9,13 +9,13 @@ app = FastAPI(title=fastapi_title, version=fastapi_version, contact=fastapi_cont
 
 ###########
 
-@app.get("/getClientCorporation/{client_corporation_id}")
-def get_Client_Corporation(client_corporation_id:int):
-    resp = ClientCorporation(client_corporation_id)
+@app.get("/getClientCorporationDetails/{client_corporation_id}")
+def get_Client_Corporation_Details(client_corporation_id:int):
+    resp = ClientCorporationDetails(client_corporation_id)
     return resp
 
 
-@app.get("/getVacancy/{vacancy_id}")
-def getVacancy(vacancy_id:int):
-    resp = Vacancy(vacancy_id)
+@app.get("/getVacancyDetails/{vacancy_id}")
+def get_Vacancy_Details(vacancy_id:int):
+    resp = VacancyDetails(vacancy_id)
     return resp
