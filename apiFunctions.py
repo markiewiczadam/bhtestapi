@@ -53,7 +53,7 @@ def searchClientCorporation(searchClientCorporationReq):
 
     elif searchClientCorporationReq.corpName != None:
         varname = 'corporation_name'
-        varvalue = searchClientCorporationReq.corpManager
+        varvalue = searchClientCorporationReq.corpName
 
     elif searchClientCorporationReq.corpManager != None:
         varname = 'manager'
