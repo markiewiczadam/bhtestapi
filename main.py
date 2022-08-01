@@ -18,7 +18,7 @@ def get_name(name:str):
 
 
 @app.get("/getClientCorporation/{client_corporation_id}")
-def getClientCorporation(client_corporation_id:int):
+def get_Client_Corporation(client_corporation_id:int):
     resp = ClientCorporation(client_corporation_id)
     return resp
 
