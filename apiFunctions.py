@@ -23,3 +23,14 @@ def ClientCorporation(client_corporation_id):
     return results
 
 
+def Vacancy(vacancy_id):
+    qry = """
+            SELECT array_agg(vacancy) 
+            FROM mi.v_api_VacancyDetails 
+            WHERE vacancy_id = %d
+        """ % (vacancy_id)
+
+    results = cur.execute(qry)
+    results = cur.fetchall()[0][0]
+
+    return results
