@@ -13,8 +13,8 @@ cur = conn.cursor()
 
 class searchClientCorporationReq(BaseModel):
     corpID: Optional[str]
-    corpName: Optional[str]
-    corpManager: Optional[str]
+    #corpName: Optional[str]
+    #corpManager: Optional[str]
 
 
 ######## Function Definitions
@@ -51,13 +51,13 @@ def searchClientCorporation(searchClientCorporationReq):
         varname = 'client_corporation_id'
         varvalue = searchClientCorporationReq.corpID
 
-    elif searchClientCorporationReq.corpID != None:
-        varname = 'corporation_name'
-        varvalue = searchClientCorporationReq.corpManager
+    #elif searchClientCorporationReq.corpID != None:
+    #    varname = 'corporation_name'
+    #    varvalue = searchClientCorporationReq.corpManager
 
-    elif searchClientCorporationReq.corpID != None:
-        varname = 'manager'
-        varvalue = searchClientCorporationReq.corpManager
+    #elif searchClientCorporationReq.corpID != None:
+    #    varname = 'manager'
+    #    varvalue = searchClientCorporationReq.corpManager
 
 
     qry = """
