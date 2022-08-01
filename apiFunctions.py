@@ -60,15 +60,15 @@ def searchClientCorporation(searchClientCorporationReq):
         varvalue = searchClientCorporationReq.corpManager
 
 
-    #qry = """
-    #        SELECT array_agg(client_corp)
-    #        FROM mi.v_api_ClientCorporationDetails
-    #        WHERE LOWER(%s) LIKE '%%%s%%'
-    #    """ % (varname, varvalue)
+    qry = """
+            SELECT array_agg(client_corp)
+            FROM mi.v_api_ClientCorporationDetails
+            WHERE LOWER(%s) LIKE '%%%s%%'
+        """ % (varname, varvalue)
 
     #results = cur.execute(qry)
     #results = cur.fetchall()[0]
 
-    results = {varname: varvalue}
+    results = {"query": qry}
 
     return results
