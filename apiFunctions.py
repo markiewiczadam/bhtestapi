@@ -69,4 +69,6 @@ def searchClientCorporation(searchClientCorporationReq):
     #results = cur.execute(qry)
     #results = cur.fetchall()[0]
 
-    return searchClientCorporationReq
+    #results = {varname: varvalue}
+
+    return searchClientCorporationReq.corpID
