@@ -7,9 +7,7 @@ from apiFunctions import *
 app = FastAPI(title=fastapi_title, version=fastapi_version, contact=fastapi_contact)
 
 
-@app.get("/")
-def root():
-    return {"message": "Hello Azure"}
+
 
 
 @app.get("/get")
