@@ -23,7 +23,7 @@ def getClientCorporation(client_corporation_id:int):
     return resp
 
 
-@app.get("/getClientCorporation/{vacancy_id}")
+@app.get("/getVacancy/{vacancy_id}")
 def getVacancy(vacancy_id:int):
     resp = Vacancy(vacancy_id)
     return resp
