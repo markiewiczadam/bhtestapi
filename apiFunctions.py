@@ -47,9 +47,9 @@ def vacancyDetails(vacancy_id):
 
 def searchClientCorporation(searchClientCorporationReq):
 
-    #if searchClientCorporationReq.corpID != None:
-    #    varname = 'client_corporation_id'
-    #    varvalue = searchClientCorporationReq.corpID
+    if searchClientCorporationReq.corpID != None:
+        varname = 'client_corporation_id'
+        varvalue = searchClientCorporationReq.corpID
 
     #elif searchClientCorporationReq.corpID != None:
     #    varname = 'corporation_name'
@@ -69,6 +69,6 @@ def searchClientCorporation(searchClientCorporationReq):
     #results = cur.execute(qry)
     #results = cur.fetchall()[0]
 
-    #results = {varname: varvalue}
+    results = {varname: varvalue}
 
-    return searchClientCorporationReq.corpID
+    return results
