@@ -13,8 +13,8 @@ cur = conn.cursor()
 
 class searchClientCorporationReq(BaseModel):
     corpID: Optional[str]
-    #corpName: Optional[str]
-    #corpManager: Optional[str]
+    corpName: Optional[str]
+    corpManager: Optional[str]
 
 
 ######## Function Definitions
